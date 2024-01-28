@@ -44,6 +44,8 @@
             android:id="@+id/cardStack"
             android:layout_width="350dp"
             android:layout_height="500sp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
             android:background="@drawable/card_bg"
             android:layout_centerInParent="true" />
         <ImageView

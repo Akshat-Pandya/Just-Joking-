@@ -73,7 +73,10 @@ public class MainActivity extends AppCompatActivity {
         like.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                int position=cardStackLayoutManager.getTopPosition();
+                JokeTemplate jokeTemplate=datalist.get(position);
+                saveJoke(jokeTemplate);
+                Toast.makeText(MainActivity.this, "Liked", Toast.LENGTH_SHORT).show();
             }
         });
         refresh.setOnClickListener(new View.OnClickListener() {
@@ -85,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         dislike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                cardStackView.swipe();
             }
         });
         cardStackLayoutManager=new CardStackLayoutManager(this, new CardStackListener() {
@@ -185,7 +188,9 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent=new Intent(getApplicationContext(),LikedJokes.class);
                         startActivity(intent);
                         return true;
-                    case R.id.Settings:
+                    case R.id.AboutUs:
+                        Intent intent1 = new Intent(getApplicationContext(),AboutUs.class);
+                        startActivity(intent1);
                         return true;
                     // Add cases for other menu items if needed
                     default:
@@ -268,48 +273,3 @@ public class MainActivity extends AppCompatActivity {
         queue.add(jsonObjectRequest);
     }
 }
-  /* private void showCustomPopupMenu(View view) {
-        PopupMenu popupMenu = new PopupMenu(this, view);
-        MenuInflater inflater = popupMenu.getMenuInflater();
-        inflater.inflate(R.menu.options_menu, popupMenu.getMenu());
-
-        // Set up a click listener for the items in the custom menu
-        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.Settings:
-                        Toast.makeText(MainActivity.this, "Settings options tapped", Toast.LENGTH_SHORT).show();
-                        return true;
-                    case R.id.likedJokes:
-                        Toast.makeText(MainActivity.this, "Liked Jokes Tapped", Toast.LENGTH_SHORT).show();
-                        return true;
-                    default:
-                        return false;
-                }
-            }
-        });
-
-        // Show the popup menu
-        popupMenu.show();
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        /*MenuInflater inflater=getMenuInflater();
-        inflater.inflate(R.menu.options_menu,menu);
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch(item.getItemId())
-        {
-            case R.id.Settings:
-                Toast.makeText(this, "Settings options tapped", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.likedJokes:
-                Toast.makeText(this, "Liked Jokes Tapped", Toast.LENGTH_SHORT).show();
-                break;
-        }
-       return super.onOptionsItemSelected(item);
-    }
-    */ // Options menu code

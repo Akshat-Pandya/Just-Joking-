@@ -1,0 +1,118 @@
+<!-- activity_about_us.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/about_bg"
+    android:padding="0dp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/myToolBar"
+        android:layout_alignParentTop="true"
+        android:background="@color/purple_500">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Just Joking ! "
+                android:textColor="@color/white"
+                android:layout_marginStart="4dp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:textSize="24sp"/>
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <ImageView
+        android:id="@+id/aboutUsLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/applogo"
+        android:background="@drawable/rectangle"
+        android:padding="4dp"
+        android:elevation="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/myToolBar"
+        android:layout_marginTop="18dp"
+        />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Just Joking !"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:layout_below="@id/aboutUsLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/aboutUsDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle"
+        android:layout_below="@id/title"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="16dp"
+        android:padding="12dp"
+        android:fontFamily="@font/adamina"
+        android:text="Welcome to Just Joking App, your go-to place for a good laugh! This app is designed to bring joy and laughter to your day. Enjoy a variety of jokes, funny stories, and humorous content. Thank you for using our app!"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/gray"
+        android:layout_below="@id/aboutUsDescription"
+        />
+    <TextView
+        android:id="@+id/feedbackSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/black"
+        android:text="Feedback and support:"
+        android:layout_marginLeft="100dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/linkedinProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_below="@id/feedbackSection"
+        android:layout_marginTop="6dp"
+        android:padding="4dp"
+        android:textStyle="italic"
+        android:textColor="@color/mysecondary"
+        android:text="## Connect with me on LinkedIn :\nhttps://www.linkedin.com/in/akshat-pandya-35778b2b0/"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/githubProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:textStyle="italic"
+        android:layout_marginTop="6dp"
+        android:padding="4dp"
+        android:layout_below="@id/linkedinProfile"
+        android:textColor="@color/mysecondary"
+        android:text="## Explore my GitHub projects:\n  https://github.com/Akshat-Pandya"
+        android:textSize="18sp" />
+
+</RelativeLayout>
+
