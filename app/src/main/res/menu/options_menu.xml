@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/likedJokes"
+        android:icon="@drawable/like"
+        android:title="Liked Jokes"
+        app:showAsAction="never"
+        android:iconTint="@color/black"
+        />
+    <item android:id="@+id/Settings"
+        android:icon="@drawable/set"
+        android:title="Settings"
+        app:showAsAction="always"
+        android:iconTint="@color/black"
+        />
+
+
+</menu>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cardLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/card_bg">
+
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="500dp"
+     android:layout_marginLeft="4dp"
+     android:layout_marginRight="4dp"
+     android:background="@drawable/card_bg">
+     <ImageView
+         android:id="@+id/jokeimage"
+         android:layout_width="250dp"
+         android:layout_height="250dp"
+         android:layout_marginTop="18dp"
+         android:layout_below="@+id/joke_typeTextView"
+         android:layout_centerHorizontal="true"/>
+     <TextView
+         android:id="@+id/joke_typeTextView"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="29sp"
+         android:textColor="#00FF04"
+         android:textStyle="bold"
+         android:layout_centerHorizontal="true"
+         android:text="Joke Type"/>
+     <ImageView
+         android:id="@+id/shareButton"
+         android:layout_width="28dp"
+         android:layout_height="28dp"
+
+         android:layout_marginTop="5dp"
+         android:layout_alignParentRight="true"
+         android:layout_marginRight="5dp"
+         android:visibility="visible"
+         android:background="@drawable/baseline_share_24"/>
+
+     <TextView
+         android:id="@+id/jokeTextview"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/jokeimage"
+         android:layout_centerInParent="true"
+         android:layout_marginStart="10dp"
+         android:layout_marginTop="18dp"
+         android:layout_marginEnd="10dp"
+         android:layout_marginBottom="10dp"
+         android:letterSpacing="0.005"
+         android:text="Joke Text : This is a sample joke text "
+         android:textColor="@color/offwhite"
+         android:textSize="20sp"
+         android:textStyle="bold" />
+
+
+
+ </RelativeLayout>
+
+
+</RelativeLayout>
